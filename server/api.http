@@ -1,0 +1,34 @@
+@baseUrl = http://localhost:3333
+
+# --------------- GOALS ----------------
+
+# @name create-goal
+POST {{baseUrl}}/goals
+Content-Type: application/json
+
+{
+  "title": "Meu primeiro titulo 2",
+  "desiredWeeklyFrequency": 1
+}
+
+###
+
+# @name create-goal-completion
+POST {{baseUrl}}/completions
+Content-Type: application/json
+
+{
+  "goalId": "l3dhl2m6275cglrtdr863nv1"
+}
+
+###
+
+# @name get-pending-goals
+GET {{baseUrl}}/pending-goals
+Content-Type: application/json
+
+###
+
+# @name get-week-summary
+GET {{baseUrl}}/summary
+Content-Type: application/json
